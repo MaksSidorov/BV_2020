@@ -1,4 +1,5 @@
 ﻿import sys
+import pandas as pd
 import csv
 from PyQt5 import QtGui, QtCore
 from PyQt5 import QtWidgets
@@ -32,9 +33,8 @@ class Prog(QWidget):
 
     def run(self):
         fname = QFileDialog.getOpenFileName(self, 'Выбрать файл',
-                                            '', "Excel файл(*.xlsx)")[0]
-        data = make_data(fname)
-        result = make_predict(data)
+                                            '', "CSV файл(*.csv)")[0]
+        result = make_predict(pd.read_csv(fname))
         self.tableWidget.clear()
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['id валка', 'Полученный износ'])
