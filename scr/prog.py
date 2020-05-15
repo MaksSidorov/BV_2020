@@ -28,7 +28,7 @@ class Prog(QWidget):
         self.tableWidget.resizeColumnsToContents()
         self.btn = QPushButton('Выбрать файл', self)
         self.btn.move(750, 20)
-        self.btn.resize(200 ,50)
+        self.btn.resize(200, 50)
         self.btn.clicked.connect(self.run)
 
     def run(self):
@@ -46,9 +46,6 @@ class Prog(QWidget):
             for j, elem in enumerate(row):
                 self.tableWidget.setItem(i, j, QTableWidgetItem(str(elem)))
         self.tableWidget.resizeColumnsToContents()
-
-            
-
 
 
 if __name__ == '__main__':
