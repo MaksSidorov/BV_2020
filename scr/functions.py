@@ -24,6 +24,10 @@ def make_predict(df):
         print(err)
 
 
+if __name__ == '__main__':
+    print('Функция для предсказания')
+
+
 
 
 

@@ -21,7 +21,7 @@ class Prog(QWidget):
         self.setGeometry(0, 0, 1000, 700)
         self.setWindowTitle('Износ валков')
         self.tableWidget = QTableWidget(self)
-        self.tableWidget.resize(300, 450)
+        self.tableWidget.resize(400, 450)
         self.tableWidget.move(50, 20)
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['id валка', 'Полученный износ'])
@@ -39,7 +39,7 @@ class Prog(QWidget):
         self.tableWidget.setColumnCount(2)
         self.tableWidget.setHorizontalHeaderLabels(['id валка', 'Полученный износ'])
         self.tableWidget.setRowCount(0)
-        self.tableWidget.resize(300, 450)
+        self.tableWidget.resize(400, 450)
         result.sort(key=lambda x: x[1], reverse=True)
         for i, row in enumerate(result):
             self.tableWidget.setRowCount(self.tableWidget.rowCount() + 1)
